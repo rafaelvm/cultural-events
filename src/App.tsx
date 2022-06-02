@@ -1,14 +1,18 @@
+import { Header } from "./components/Header/Header";
 import { GlobalStyle } from "./styles/global";
+import { ThemeProvider } from "styled-components";
+import theme from "styles/theme";
+import { Home } from "pages/Home/Home";
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <div style={{ textAlign: "center", marginTop: 80 }}>
-        <h1>Boileplate React with Typescript</h1>
-        <h4 style={{ fontWeight: 400, marginTop: 10 }}>come be happy :D</h4>
+      <Header />
+      <div className="mainContainer">
+        <Home />
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 

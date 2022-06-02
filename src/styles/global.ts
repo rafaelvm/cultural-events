@@ -1,17 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  :root {
-    // examples
-    --background: #F0F2F5;
-    --blue: #5429CC;
-    --red: #E62E4D;
-    --green: #33cc95;
-    --blue-light: #6933FF;
-    --text-title: #363F5F;
-    --text-body: #969CB3;
-    --shape: #FFFFFF;
-  }
   * { 
     margin: 0; 
     padding: 0;
@@ -57,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
  .react-modal-content {
    width: 100%;
    max-width: 576px;
-   background: var(--background);
+   background:#F0F2F5;
    padding: 3rem;
    position: relative;
    border-radius: 0.25rem;
@@ -72,5 +61,9 @@ export const GlobalStyle = createGlobalStyle`
    &:hover {
     filter: brightness(0.8);
    }
+ }
+ .mainContainer {
+  max-width: 1120px;
+  margin: 0 auto;
  }
 `;
