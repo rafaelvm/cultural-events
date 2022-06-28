@@ -32,6 +32,22 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    background: #F0F2F5;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #F0F2F5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D1D3D7;
+    border-radius: 8px;
+  }
+  
   .react-modal-overlay {
     background: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -43,18 +59,21 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
   }
+
  .react-modal-content {
    width: 100%;
    max-width: 576px;
    background:#F0F2F5;
-   padding: 3rem;
+   padding: 2rem;
    position: relative;
    border-radius: 0.25rem;
+   border: 3px solid #71dbd2;
  }
+
  .react-modal-close {
    position: absolute;
    right: 1.5rem;
-   top: 1.5rem;
+   top: 26px;
    border: 0;
    background: transparent;
    transition: filter 0.2s;
@@ -62,8 +81,40 @@ export const GlobalStyle = createGlobalStyle`
     filter: brightness(0.8);
    }
  }
+
  .mainContainer {
-  max-width: 1120px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 32px;
  }
+
+ .swiper {
+  width: 100%;
+  height: 369px;
+  border-radius: 8px;
+
+  @media (max-width: 768px) {
+    height: 341px;
+    }
+ }
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 `;

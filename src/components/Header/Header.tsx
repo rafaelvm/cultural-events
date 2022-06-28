@@ -7,7 +7,6 @@ export const Header: React.FC = () => {
     <Container>
       <Content>
         <Logo />
-
         <Item />
       </Content>
     </Container>

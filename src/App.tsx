@@ -1,17 +1,15 @@
-import { Header } from "./components/Header/Header";
 import { GlobalStyle } from "./styles/global";
 import { ThemeProvider } from "styled-components";
+import { Footer } from "components/Footer/Footer";
 import theme from "styles/theme";
-import { Home } from "pages/Home/Home";
+import Routes from "router";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header />
-      <div className="mainContainer">
-        <Home />
-      </div>
+      <Routes />
+      <Footer />
     </ThemeProvider>
   );
 }

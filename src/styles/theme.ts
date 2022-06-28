@@ -9,6 +9,7 @@ const theme = {
     neutralGreen: "#eeffdb",
     neutral: "#1C1C1C",
     primaryOrange: "#FF834F",
+    disableBg: "#D1D3D7",
   },
 };
 export default theme;
