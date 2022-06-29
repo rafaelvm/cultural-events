@@ -14,8 +14,16 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
   svg {
     width: 120px;
     height: 120px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;

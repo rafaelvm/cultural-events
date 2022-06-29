@@ -20,6 +20,8 @@ export const Navbar = styled.nav`
         a {
           text-decoration: none;
           color: ${theme.colors.primaryOrange};
+          display: flex;
+          align-items: center;
         }
 
         svg {

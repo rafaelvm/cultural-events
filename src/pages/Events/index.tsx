@@ -13,7 +13,7 @@ export const Events: React.FC = () => {
 
   return (
     <Container className="mainContainer">
-      <div onClick={toggleDetailsModal}>
+      <div onClick={toggleDetailsModal} style={{ margin: "0 auto" }}>
         <EventList toggleModal={() => console.log("Ok")}>{events}</EventList>
       </div>
 

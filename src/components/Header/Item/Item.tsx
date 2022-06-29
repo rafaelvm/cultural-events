@@ -1,5 +1,10 @@
 import { Navbar } from "./styles";
-import { FaHome, FaRegCalendarAlt } from "react-icons/fa";
+import {
+  FaHome,
+  FaRegCalendarAlt,
+  FaBookmark,
+  FaPhoneSquareAlt,
+} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 export const Item: React.FC = () => {
@@ -17,14 +22,16 @@ export const Item: React.FC = () => {
       icon: <FaRegCalendarAlt />,
     },
     {
-      active: false,
-      url: "/favoritos",
+      active: true,
+      url: "/eventos-favoritos",
       title: "Favoritos",
+      icon: <FaBookmark />,
     },
     {
-      active: false,
+      active: true,
       url: "/contato",
       title: "Contato",
+      icon: <FaPhoneSquareAlt />,
     },
   ];
 

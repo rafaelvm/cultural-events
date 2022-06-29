@@ -1,6 +1,5 @@
 import { Header } from "components/Header/Header";
-import { Events } from "pages/Events";
-import { Home } from "pages/Home";
+import { Home, Events, Contact, FavoriteEvents } from "pages";
 import { Switch, Route, Router, Redirect } from "react-router-dom";
 import history from "utils/history";
 
@@ -11,6 +10,8 @@ const Routes = () => {
       <Switch>
         <Route exact path="/inicio" component={Home} />
         <Route exact path="/eventos" component={Events} />
+        <Route exact path="/contato" component={Contact} />
+        <Route exact path="/eventos-favoritos" component={FavoriteEvents} />
         <Redirect to="/inicio" />
       </Switch>
     </Router>
