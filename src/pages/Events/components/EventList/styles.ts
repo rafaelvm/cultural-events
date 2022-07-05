@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  margin-top: 56px;
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, auto);
   gap: 24px;
+  margin-top: 32px;
 
-  svg {
-    width: 120px;
-    height: 120px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
@@ -16,8 +16,6 @@ export const ContentWrapper = styled.div`
   ${({ theme }) => css`
     border: 2px solid ${theme.colors.primaryBlue};
     border-radius: 8px;
-    max-width: 550px;
-    width: 100%;
     height: 250px;
     padding: 24px;
     cursor: pointer;
@@ -25,7 +23,6 @@ export const ContentWrapper = styled.div`
     box-shadow: 1px 1px 5px ${theme.colors.primaryBlue};
     display: grid;
     grid-template-columns: 200px auto;
-    gap: 24px;
 
     h3 {
       margin-bottom: 10px;
@@ -36,11 +33,15 @@ export const ContentWrapper = styled.div`
 export const Svg = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 24px;
+  width: 120px;
+  height: 120px;
 `;
 
 export const Details = styled.p`
   ${({ theme }) => css`
     color: ${theme.colors.primaryOrange};
     font-weight: 600;
+    margin-top: 24px;
   `}
 `;

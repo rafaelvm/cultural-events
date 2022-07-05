@@ -13,7 +13,5 @@ export const Container = styled.footer`
 `;
 
 export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    font-weight: 600;
-  `}
+  font-weight: 600;
 `;

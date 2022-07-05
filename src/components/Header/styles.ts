@@ -3,6 +3,12 @@ import styled, { css } from "styled-components";
 export const Container = styled.header`
   ${({ theme }) => css`
     border-bottom: 2px solid ${theme.colors.background};
+
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   `}
 `;
 
@@ -13,10 +19,6 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  @media (max-width: 768px) {
-    text-align: center;
-  }
 
   svg {
     width: 120px;

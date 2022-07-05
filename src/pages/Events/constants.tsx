@@ -7,6 +7,7 @@ export const events = [
     description:
       "Juma fará uma apresentação bem empolgante sobre sua transformação...",
     image: <Logo />,
+    category: "musica",
   },
   {
     id: 1,
@@ -14,6 +15,7 @@ export const events = [
     description:
       "Chegue com seu veículo, de qualquer tipo, e acomode-se para um excelente curta",
     image: <Logo />,
+    category: "lazer",
   },
   {
     id: 2,
@@ -21,6 +23,7 @@ export const events = [
     description:
       "Traga seu filho ou filha para uma tarde com muita água e diversão",
     image: <Logo />,
+    category: "lazer",
   },
   {
     id: 3,
@@ -28,5 +31,6 @@ export const events = [
     description:
       "Venha aproveitar a oficina para aprender ou demonstrar seus doms.",
     image: <Logo />,
+    category: "artesanato",
   },
 ];

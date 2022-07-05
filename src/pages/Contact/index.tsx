@@ -1,5 +1,5 @@
 import { ContactData, Container, Title } from "./styles";
-import { FaRegEnvelope, FaPhoneAlt, FaLocationArrow } from "react-icons/fa";
+import { FaRegEnvelope, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 export const Contact: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ export const Contact: React.FC = () => {
           <p>(11) 9999-9999</p>
         </div>
         <div>
-          <FaLocationArrow />
+          <FaWhatsapp />
           Whatsapp:
           <p>(11) 99999-9999</p>
         </div>

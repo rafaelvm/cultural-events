@@ -1,10 +1,29 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  margin-top: 56px;
-  display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 24px;
+  margin: 32px auto auto;
+  gap: 10px;
+  max-width: 1200px;
+  padding: 0.5rem;
+`;
+
+export const SearchContainer = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    select {
+      border: 2px solid ${theme.colors.primaryBlue};
+      border-radius: 4px;
+      padding: 6px;
+
+      option {
+        color: ${theme.colors.primaryOrange};
+      }
+    }
+  `}
 `;
 
 export const DetailsWrapper = styled.div`
@@ -19,4 +38,10 @@ export const DetailsWrapper = styled.div`
       color: blue;
     }
   }
+`;
+
+export const InfoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
 `;
