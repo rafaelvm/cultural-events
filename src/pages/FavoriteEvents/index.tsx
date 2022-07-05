@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { events } from "pages/Events/constants";
 import { Button } from "components/Button/Button";
+import { Container, FavoritList } from "./styles";
 
 export function FavoriteEvents() {
   const [favorites, setFavorites] = useState([]);
@@ -18,7 +19,7 @@ export function FavoriteEvents() {
   }, []);
 
   return (
-    <div className="mainContainer">
+    <Container className="mainContainer">
       <h1>Lista de eventos</h1>
       <ul>
         {favorites.map((item, index) => (
@@ -38,9 +39,11 @@ export function FavoriteEvents() {
       <h1>Eventos Favoritos</h1>
       <ul>
         {favorites.map((item) =>
-          item.favorite ? <li key={item.id}>{item.title}</li> : null
+          item.favorite ? (
+            <FavoritList key={item.id}>{item.title}</FavoritList>
+          ) : null
         )}
       </ul>
-    </div>
+    </Container>
   );
 }
