@@ -7,7 +7,7 @@ export const events = [
     description:
       "Juma fará uma apresentação bem empolgante sobre sua transformação...",
     image: <Logo />,
-    category: "musica",
+    category: "música",
   },
   {
     id: 1,

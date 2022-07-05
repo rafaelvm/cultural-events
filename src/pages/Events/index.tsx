@@ -86,7 +86,7 @@ export const Events: React.FC = () => {
       </SearchContainer>
 
       <div onClick={toggleDetailsModal}>
-        <EventList toggleModal={() => console.log("Ok")}>
+        <EventList toggleModal={() => console.log("ok")}>
           {filteredList}
         </EventList>
       </div>
