@@ -14,13 +14,13 @@ export const Container = styled.div`
 
 export const ContentWrapper = styled.div`
   ${({ theme }) => css`
-    border: 2px solid ${theme.colors.primaryBlue};
+    border: 2px solid ${theme.colors.darkBlue};
     border-radius: 8px;
     height: 250px;
     padding: 24px;
     cursor: pointer;
     user-select: none;
-    box-shadow: 1px 1px 5px ${theme.colors.primaryBlue};
+    box-shadow: 1px 1px 5px ${theme.colors.darkBlue};
     display: grid;
     grid-template-columns: 200px auto;
 
@@ -40,7 +40,7 @@ export const Svg = styled.div`
 
 export const Details = styled.p`
   ${({ theme }) => css`
-    color: ${theme.colors.primaryOrange};
+    color: ${theme.colors.ciano};
     font-weight: 600;
     margin-top: 24px;
   `}

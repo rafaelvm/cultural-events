@@ -19,7 +19,7 @@ export const Navbar = styled.nav`
 
         a {
           text-decoration: none;
-          color: ${theme.colors.primaryOrange};
+          color: ${theme.colors.darkBlue};
           display: flex;
           align-items: center;
         }
@@ -32,7 +32,7 @@ export const Navbar = styled.nav`
     }
 
     .activeLink {
-      color: ${theme.colors.primaryBlue};
+      color: ${theme.colors.mediumBlue};
       text-decoration: underline;
     }
   `}

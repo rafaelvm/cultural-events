@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid ${theme.colors.disableBg};
+    border-bottom: 2px solid ${theme.colors.background};
     padding-bottom: 20px;
   `}
 `;

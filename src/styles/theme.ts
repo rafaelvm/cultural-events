@@ -1,15 +1,12 @@
 const theme = {
   colors: {
-    background: "#F0F2F5",
     white: "#FFFFFF",
-    primaryBlue: "#71dbd2",
-    primaryYellow: "#fff18c",
-    primaryGreen: "#ade4b5",
-    secondaryGreen: "#d0eaa3",
-    neutralGreen: "#eeffdb",
-    neutral: "#1C1C1C",
-    primaryOrange: "#FF834F",
-    disableBg: "#D1D3D7",
+    background: "#F0F2F5",
+    black: "#343838",
+    darkBlue: "#005f6b",
+    mediumBlue: "#008c9e",
+    ciano: "#00b4cc",
+    lightBlue: "#00dffc",
   },
 };
 export default theme;

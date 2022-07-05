@@ -36,12 +36,12 @@ export const GlobalStyle = createGlobalStyle`
 
   ::-webkit-scrollbar {
     width: 8px;
-    background: #F0F2F5;
+    background: #FFFFFF;
     border-radius: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background-color: #F0F2F5;
+    background-color: #FFFFFF;
   }
 
   ::-webkit-scrollbar-thumb {
@@ -64,11 +64,11 @@ export const GlobalStyle = createGlobalStyle`
  .react-modal-content {
    width: 100%;
    max-width: 576px;
-   background:#F0F2F5;
+   background:#FFFFFF;
    padding: 2rem;
    position: relative;
    border-radius: 0.25rem;
-   border: 3px solid #71dbd2;
+   border: 2px solid #008c9e;
  }
 
  .react-modal-close {
@@ -104,7 +104,7 @@ export const GlobalStyle = createGlobalStyle`
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: #FFFFFF;
   display: flex;
   justify-content: center;
   align-items: center;

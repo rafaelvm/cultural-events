@@ -2,12 +2,12 @@ import { Container, ContentWrapper, Details, Svg } from "./styles";
 
 interface EventListProps {
   children: any;
-  toggleModal?: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: (value: any) => void
 }
 
 export const EventList: React.FC<EventListProps> = ({
   children,
-  toggleModal,
+  onClick,
 }) => {
   return (
     <Container>
@@ -17,7 +17,7 @@ export const EventList: React.FC<EventListProps> = ({
           <div>
             <h3>{event.title}</h3>
             <p>{event.description}</p>
-            <Details onClick={() => toggleModal(event.id)}>Ver mais</Details>
+            <Details onClick={onClick}>Ver mais</Details>
           </div>
         </ContentWrapper>
       ))}

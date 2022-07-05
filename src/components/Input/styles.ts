@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const InputWrapper = styled.input`
   ${({ theme }) => css`
-    border: 2px solid ${theme.colors.disableBg};
+    border: 2px solid ${theme.colors.background};
     border-radius: 4px;
     margin: 8px 0;
     outline: none;
@@ -12,8 +12,8 @@ export const InputWrapper = styled.input`
     width: 30%;
 
     &:focus {
-      border-color: ${theme.colors.primaryBlue};
-      box-shadow: 0 0 8px 0 ${theme.colors.primaryBlue};
+      border-color: ${theme.colors.mediumBlue};
+      box-shadow: 0 0 8px 0 ${theme.colors.mediumBlue};
     }
   `}
 `;

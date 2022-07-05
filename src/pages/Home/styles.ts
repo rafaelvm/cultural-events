@@ -6,7 +6,7 @@ export const Container = styled.div`
     flex-direction: column;
 
     p {
-      color: ${theme.colors.primaryOrange};
+      color: ${theme.colors.mediumBlue};
       font-size: 24px;
       margin: 52px 0 40px 12px;
     }

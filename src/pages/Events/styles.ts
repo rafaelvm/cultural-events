@@ -8,29 +8,31 @@ export const SearchContainer = styled.div`
     gap: 12px;
 
     select {
-      border: 2px solid ${theme.colors.primaryBlue};
+      border: 2px solid ${theme.colors.darkBlue};
       border-radius: 4px;
       padding: 6px;
 
       option {
-        color: ${theme.colors.primaryOrange};
+        color: ${theme.colors.darkBlue};
       }
     }
   `}
 `;
 
 export const DetailsWrapper = styled.div`
-  margin-top: 32px;
-  font-size: 18px;
-  font-weight: 500;
+  ${({ theme }) => css`
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 500;
 
-  p {
-    margin-bottom: 24px;
+    p {
+      margin-bottom: 24px;
 
-    strong {
-      color: blue;
+      strong {
+        color: ${theme.colors.darkBlue};
+      }
     }
-  }
+  `}
 `;
 
 export const InfoWrapper = styled.div`

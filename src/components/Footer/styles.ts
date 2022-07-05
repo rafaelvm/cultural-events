@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.footer`
   ${({ theme }) => css`
-    background: ${theme.colors.primaryBlue};
+    background: ${theme.colors.darkBlue};
     height: 80px;
     text-align: center;
     display: flex;
@@ -12,5 +12,8 @@ export const Container = styled.footer`
 `;
 
 export const Wrapper = styled.div`
-  font-weight: 600;
+  ${({ theme }) => css`
+    font-weight: 600;
+    color: ${theme.colors.white};
+  `}
 `;
