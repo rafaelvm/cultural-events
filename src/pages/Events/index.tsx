@@ -5,7 +5,6 @@ import { autoCapitalize } from "utils/autoCapitalize";
 import { EventList } from "./components/EventList/EventList";
 import { events } from "./constants";
 import {
-  Container,
   DetailsWrapper,
   InfoWrapper,
   SearchContainer,
@@ -59,19 +58,18 @@ export const Events: React.FC = () => {
     setFilteredItem(filtered);
   };
 
-
   useEffect(() => {
     setEventList(events);
   }, []);
 
   return (
-    <Container>
+    <div className="mainContainer">
       <SearchContainer>
         <Input
           value={search || ""}
           name="text"
           type="text"
-          placeholder="Procure pelo nome do evento"
+          placeholder="Procure pelo nome do evento ou pela categoria"
           onChange={handleSearchChange}
         />
 
@@ -103,6 +101,6 @@ export const Events: React.FC = () => {
           <ItemDetails />
         </DetailsWrapper>
       </DetailsModal>
-    </Container>
+    </div>
   );
 };

@@ -87,10 +87,8 @@ export const GlobalStyle = createGlobalStyle`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   line-height: 32px;
+  min-height: 77vh;
  }
 
  .swiper {

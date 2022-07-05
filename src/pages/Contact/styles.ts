@@ -1,6 +1,14 @@
 import styled, { css } from "styled-components";
 
+
 export const Container = styled.div`
+  margin: 0 auto;
+  padding: 0.5rem;
+  line-height: 32px;
+  min-height: 77vh;
+`;
+
+export const InfoContainer = styled.div`
   background-image: url("https://img.freepik.com/fotos-gratis/atendimento-ao-cliente-e-conceito-de-contato-comercial-bloco-de-cubo-de-madeira-que-imprime-o-endereco-de-e-mail-e-a-mensagem-do-telefone-da-carta-da-tela_616485-45.jpg");
   background-size: cover;
   background-repeat: no-repeat;

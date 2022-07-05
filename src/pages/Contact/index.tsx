@@ -1,12 +1,12 @@
-import { ContactData, Container, Title } from "./styles";
+import { ContactData, Container, InfoContainer, Title } from "./styles";
 import { FaRegEnvelope, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 export const Contact: React.FC = () => {
   return (
-    <>
-      <Container>
+    <Container>
+      <InfoContainer>
         <Title>Entre em contato</Title>
-      </Container>
+      </InfoContainer>
       <ContactData>
         <div>
           <FaRegEnvelope />
@@ -24,6 +24,6 @@ export const Contact: React.FC = () => {
           <p>(11) 99999-9999</p>
         </div>
       </ContactData>
-    </>
+    </Container>
   );
 };

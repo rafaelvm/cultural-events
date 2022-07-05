@@ -18,7 +18,7 @@ export function FavoriteEvents() {
   }, []);
 
   return (
-    <>
+    <div className="mainContainer">
       <h1>Lista de eventos</h1>
       <ul>
         {favorites.map((item, index) => (
@@ -41,6 +41,6 @@ export function FavoriteEvents() {
           item.favorite ? <li key={item.id}>{item.title}</li> : null
         )}
       </ul>
-    </>
+    </div>
   );
 }

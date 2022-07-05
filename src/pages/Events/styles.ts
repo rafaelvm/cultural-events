@@ -1,12 +1,5 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
-  margin: 32px auto auto;
-  gap: 10px;
-  max-width: 1200px;
-  padding: 0.5rem;
-`;
-
 export const SearchContainer = styled.div`
   ${({ theme }) => css`
     display: flex;
