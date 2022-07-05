@@ -1,6 +1,6 @@
 import { Input } from "components/Input";
 import { DetailsModal } from "components/Modal";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect,  useState } from "react";
 import { autoCapitalize } from "utils/autoCapitalize";
 import { EventList } from "./components/EventList/EventList";
 import { events } from "./constants";
@@ -15,8 +15,12 @@ import ItemDetails from "./components/ItemDetails/ItemDetails";
 export const Events: React.FC = () => {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [eventList, setEventList] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState();
   const [search, setNewSearch] = useState("");
+  const [filteredItem, setFilteredItem] = useState([]);
+
+  const toggleDetailsModal = () => {
+    setIsDetailsModalOpen((prevState) => !prevState);
+  };
 
   const filteredEvents = events.reduce((acc, current) => {
     const filter = acc.find((item) => item.category === current.category);
@@ -27,35 +31,34 @@ export const Events: React.FC = () => {
     }
   }, []);
 
-  const toggleDetailsModal = () => {
-    setIsDetailsModalOpen((prevState) => !prevState);
-  };
-
-  const getFilteredList = () => {
-    if (!selectedCategory) {
-      return eventList;
-    }
-    return eventList.filter((item) => item.category === selectedCategory);
-  };
-
   const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
+    const filteredCategory = eventList.filter(item => {
+      if(item.category.toLowerCase().indexOf(event.target.value) > -1) {
+        return item
+      }
+      return null
+    })
 
-  const filteredList = useMemo(getFilteredList, [selectedCategory, eventList]);
+    setFilteredItem(filteredCategory)
+  };
 
   const handleSearchChange = (event) => {
     setNewSearch(event.target.value);
+
+    const filtered = eventList.filter(item => {
+      if(item.title.toLowerCase().indexOf(event.target.value) > -1) {
+        return item
+      }
+      if(item.category.toLowerCase().indexOf(event.target.value) > -1) {
+        return item
+      }
+
+      return null
+    })
+
+    setFilteredItem(filtered);
   };
 
-  const filteredLowerCase = search.toLowerCase();
-
-  const filtered =
-    search.length >= 3
-      ? eventList.filter((item) =>
-          item.title.toLowerCase().includes(filteredLowerCase)
-        )
-      : events;
 
   useEffect(() => {
     setEventList(events);
@@ -87,7 +90,7 @@ export const Events: React.FC = () => {
 
       <div onClick={toggleDetailsModal}>
         <EventList toggleModal={() => console.log("ok")}>
-          {filteredList}
+          {filteredItem.length > 0  ? filteredItem : eventList}
         </EventList>
       </div>
 
