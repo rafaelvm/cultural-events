@@ -30,11 +30,11 @@ export const ContentWrapper = styled.div`
   `}
 `;
 
-export const Svg = styled.div`
+export const Image = styled.img`
   display: flex;
   align-items: center;
   margin-top: 24px;
-  width: 120px;
+  width: 165px;
   height: 120px;
 `;
 
