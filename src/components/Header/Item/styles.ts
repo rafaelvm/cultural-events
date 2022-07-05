@@ -10,7 +10,6 @@ export const Navbar = styled.nav`
 
       li {
         font-size: 1.5rem;
-
         transition: all 0.2;
 
         &:hover {
@@ -32,8 +31,8 @@ export const Navbar = styled.nav`
     }
 
     .activeLink {
-      color: ${theme.colors.mediumBlue};
-      text-decoration: underline;
+      color: ${theme.colors.ciano};
+      font-weight: 600;
     }
   `}
 `;
