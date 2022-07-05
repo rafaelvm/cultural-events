@@ -29,7 +29,7 @@ export const events = [
     id: 3,
     title: "Oficina do artesanato",
     description:
-      "Venha aproveitar a oficina para aprender ou demonstrar seus doms.",
+      "Venha aproveitar a oficina para aprender ou demonstrar suas habilidades.",
     image: <Logo />,
     category: "artesanato",
   },
