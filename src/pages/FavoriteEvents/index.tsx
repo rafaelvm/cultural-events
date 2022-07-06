@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Button } from "components/Button/Button";
-import { Container, FavoritList, NotFoundEvent } from "./styles";
+import { Container, FavoritList } from "./styles";
 import { useEventContext } from "context/EventContext";
+import Spinner from "components/Spinner/Spinner";
 
 export function FavoriteEvents() {
   const { eventsList, getEventList } = useEventContext();
@@ -55,9 +56,9 @@ export function FavoriteEvents() {
     );
   } else {
     return (
-      <NotFoundEvent className="mainContainer">
-        Não há eventos favoritados no momento.
-      </NotFoundEvent>
+      <div className="mainContainer">
+        <Spinner />;
+      </div>
     );
   }
 }

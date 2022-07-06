@@ -2,15 +2,11 @@ import { Input } from "components/Input";
 import { DetailsModal } from "components/Modal";
 import { useEffect, useState } from "react";
 import { EventList } from "./components/EventList/EventList";
-import {
-  DetailsWrapper,
-  InfoWrapper,
-  NotFoundEvent,
-  SearchContainer,
-} from "./styles";
+import { DetailsWrapper, InfoWrapper, SearchContainer } from "./styles";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import Select from "components/Select/Select";
 import { useEventContext } from "context/EventContext";
+import Spinner from "components/Spinner/Spinner";
 
 export const Events: React.FC = () => {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
@@ -111,9 +107,9 @@ export const Events: React.FC = () => {
     );
   } else {
     return (
-      <NotFoundEvent className="mainContainer">
-        Não há eventos disponíveis no momento.
-      </NotFoundEvent>
+      <div className="mainContainer">
+        <Spinner />;
+      </div>
     );
   }
 };

@@ -1,27 +1,34 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  h1 {
-    margin-top: 24px;
-  }
+  ${({ theme }) => css`
+    h1 {
+      margin-top: 24px;
+    }
 
-  ul {
-    list-style-type: none;
-    padding: 16px 0;
+    ul {
+      list-style-type: none;
+      padding: 16px 0;
 
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      margin-bottom: 24px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 24px;
 
-      button {
-        padding: 8px;
-        margin: 0;
+        button {
+          transition: all 0.2;
+          padding: 8px;
+          margin: 0;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
       }
     }
-  }
+  `}
 `;
 
 export const FavoritList = styled.li`
@@ -29,13 +36,5 @@ export const FavoritList = styled.li`
     color: ${theme.colors.mediumBlue};
     font-size: 20px;
     font-weight: bold;
-  `}
-`;
-
-export const NotFoundEvent = styled.h3`
-  ${({ theme }) => css`
-    color: ${theme.colors.mediumBlue};
-    text-align: center;
-    padding-top: 56px;
   `}
 `;
