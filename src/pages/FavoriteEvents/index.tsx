@@ -9,12 +9,17 @@ export function FavoriteEvents() {
 
   const [favorites, setFavorites] = useState([]);
 
+  const saveToLocalStorage = (items) => {
+    localStorage.setItem("favorites-events", JSON.stringify(items));
+  };
+
   function handleFavorite(id: number) {
     const newFavorites = favorites.map((item) => {
       return item.id === id ? { ...item, favorite: !item.favorite } : item;
     });
 
     setFavorites(newFavorites);
+    saveToLocalStorage(newFavorites);
   }
 
   useEffect(() => {
@@ -24,6 +29,16 @@ export function FavoriteEvents() {
   useEffect(() => {
     getEventList();
   }, [getEventList]);
+
+  useEffect(() => {
+    const eventsFavourites = JSON.parse(
+      localStorage.getItem("favorites-events")
+    );
+
+    if (eventsFavourites) {
+      setFavorites(eventsFavourites);
+    }
+  }, []);
 
   if (eventsList.length > 0) {
     return (
