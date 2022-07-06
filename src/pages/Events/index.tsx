@@ -13,17 +13,11 @@ export const Events: React.FC = () => {
   const [eventList, setEventList] = useState([]);
   const [search, setNewSearch] = useState("");
   const [filteredItem, setFilteredItem] = useState([]);
-  const [details, setDetails] = useState("");
 
   const { eventsList, getEventList } = useEventContext();
 
   const toggleDetailsModal = () => {
     setIsDetailsModalOpen((prevState) => !prevState);
-  };
-
-  const toogleDetails = (value: string) => {
-    setDetails(value);
-    toggleDetailsModal();
   };
 
   const filteredEvents = eventsList.reduce((acc, current) => {
@@ -90,7 +84,7 @@ export const Events: React.FC = () => {
           </InfoWrapper>
         </SearchContainer>
 
-        <EventList onClick={toogleDetails}>
+        <EventList onClick={toggleDetailsModal}>
           {filteredItem.length > 0 ? filteredItem : eventList}
         </EventList>
 
