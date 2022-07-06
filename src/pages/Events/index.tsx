@@ -2,10 +2,15 @@ import { Input } from "components/Input";
 import { DetailsModal } from "components/Modal";
 import { useEffect, useState } from "react";
 import { EventList } from "./components/EventList/EventList";
-import { events } from "./constants";
-import { DetailsWrapper, InfoWrapper, SearchContainer } from "./styles";
+import {
+  DetailsWrapper,
+  InfoWrapper,
+  NotFoundEvent,
+  SearchContainer,
+} from "./styles";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import Select from "components/Select/Select";
+import { useEventContext } from "context/EventContext";
 
 export const Events: React.FC = () => {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
@@ -13,6 +18,8 @@ export const Events: React.FC = () => {
   const [search, setNewSearch] = useState("");
   const [filteredItem, setFilteredItem] = useState([]);
   const [details, setDetails] = useState("");
+
+  const { eventsList, getEventList } = useEventContext();
 
   const toggleDetailsModal = () => {
     setIsDetailsModalOpen((prevState) => !prevState);
@@ -23,7 +30,7 @@ export const Events: React.FC = () => {
     toggleDetailsModal();
   };
 
-  const filteredEvents = events.reduce((acc, current) => {
+  const filteredEvents = eventsList.reduce((acc, current) => {
     const filter = acc.find((item) => item.category === current.category);
     if (!filter) {
       return acc.concat([current]);
@@ -61,40 +68,52 @@ export const Events: React.FC = () => {
   };
 
   useEffect(() => {
-    setEventList(events);
-  }, []);
+    setEventList(eventsList);
+  }, [eventsList]);
 
-  return (
-    <div className="mainContainer">
-      <SearchContainer>
-        <Input
-          value={search || ""}
-          name="text"
-          type="text"
-          placeholder="Procure pelo nome do evento ou pela categoria"
-          onChange={handleSearchChange}
-        />
+  useEffect(() => {
+    getEventList();
+  }, [getEventList]);
 
-        <InfoWrapper>
-          <Select typeLabel="categoria" onChange={handleCategoryChange}>
-            {filteredEvents}
-          </Select>
-        </InfoWrapper>
-      </SearchContainer>
+  if (eventList.length > 0) {
+    return (
+      <div className="mainContainer">
+        <SearchContainer>
+          <Input
+            value={search || ""}
+            name="text"
+            type="text"
+            placeholder="Procure pelo nome do evento ou pela categoria"
+            onChange={handleSearchChange}
+          />
 
-      <EventList onClick={toogleDetails}>
-        {filteredItem.length > 0 ? filteredItem : eventList}
-      </EventList>
+          <InfoWrapper>
+            <Select typeLabel="categoria" onChange={handleCategoryChange}>
+              {filteredEvents}
+            </Select>
+          </InfoWrapper>
+        </SearchContainer>
 
-      <DetailsModal
-        title="Detalhes do evento"
-        isOpen={isDetailsModalOpen}
-        onRequestClose={toggleDetailsModal}
-      >
-        <DetailsWrapper>
-          <ItemDetails />
-        </DetailsWrapper>
-      </DetailsModal>
-    </div>
-  );
+        <EventList onClick={toogleDetails}>
+          {filteredItem.length > 0 ? filteredItem : eventList}
+        </EventList>
+
+        <DetailsModal
+          title="Detalhes do evento"
+          isOpen={isDetailsModalOpen}
+          onRequestClose={toggleDetailsModal}
+        >
+          <DetailsWrapper>
+            <ItemDetails />
+          </DetailsWrapper>
+        </DetailsModal>
+      </div>
+    );
+  } else {
+    return (
+      <NotFoundEvent className="mainContainer">
+        Não há eventos disponíveis no momento.
+      </NotFoundEvent>
+    );
+  }
 };

@@ -31,3 +31,11 @@ export const FavoritList = styled.li`
     font-weight: bold;
   `}
 `;
+
+export const NotFoundEvent = styled.h3`
+  ${({ theme }) => css`
+    color: ${theme.colors.mediumBlue};
+    text-align: center;
+    padding-top: 56px;
+  `}
+`;

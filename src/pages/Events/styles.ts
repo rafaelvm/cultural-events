@@ -40,3 +40,11 @@ export const InfoWrapper = styled.div`
   align-items: center;
   gap: 12px;
 `;
+
+export const NotFoundEvent = styled.h3`
+  ${({ theme }) => css`
+    color: ${theme.colors.mediumBlue};
+    text-align: center;
+    padding-top: 56px;
+  `}
+`;

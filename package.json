@@ -1,9 +1,9 @@
 {
-  "name": "cultura-events",
+  "name": "cultural-events",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/react-router-dom": "^5.3.3",
+    "axios": "^0.27.2",
     "history": "^4.10.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -17,6 +17,7 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -31,7 +32,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "json-server": "json-server --watch db.json --port 3333"
   },
   "eslintConfig": {
     "extends": [

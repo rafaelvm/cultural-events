@@ -1,5 +1,4 @@
 import { Container, ContentWrapper, Details, Image } from "./styles";
-
 interface EventListProps {
   children: any;
   onClick?: (value: any) => void;
