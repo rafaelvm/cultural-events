@@ -6,6 +6,8 @@ class EventsService {
 
     return data;
   }
+
+
 }
 
 export default EventsService;

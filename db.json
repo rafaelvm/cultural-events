@@ -5,28 +5,56 @@
       "title": "Concerto musical",
       "description": "Juma fará uma apresentação bem empolgante sobre sua transformação...",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFytBEWRCVigRCsvwz_9pnA2Sr_HHqQuTExw&usqp=CAU",
-      "category": "música"
+      "category": "música",
+      "details": {
+        "location": "São Paulo",
+        "temperature": "13C - 22C",
+        "entry": "20 Horas",
+        "ageGroup": "A partir de 16 anos",
+        "date": "09 de Dezembro de 2022"
+      }
     },
     {
       "id": 1,
       "title": "Cinema ao ar livre",
       "description": "Chegue com seu veículo, de qualquer tipo, e acomode-se para um excelente curta",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5U2mwHnq7jH7PbGxi_E2TMptAgQcTzvo1Jg&usqp=CAU",
-      "category": "lazer"
+      "category": "lazer",
+      "details": {
+        "location": "São Paulo",
+        "temperature": "17C - 28C",
+        "entry": "22 Horas",
+        "ageGroup": "A partir de 18 anos",
+        "date": "04 de Agosto de 2022"
+      }
     },
     {
       "id": 2,
       "title": "Natação para crianças",
       "description": "Traga seu filho ou filha para uma tarde com muita água e diversão",
       "image": "http://urupes.sp.gov.br/noticias/upload/postagens/1642015980_74322.jpg",
-      "category": "lazer"
+      "category": "lazer",
+      "details": {
+        "location": "São Paulo",
+        "temperature": "17C - 28C",
+        "entry": "11 Horas",
+        "ageGroup": "A partir de 08 anos",
+        "date": "10 de Abril de 2022"
+      }
     },
     {
       "id": 3,
       "title": "Oficina de artesanato",
       "description": "Venha aproveitar a oficina para aprender ou demonstrar suas habilidades",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjvR5wigJqSQmWy9B9R_ZhDRzrspX6z5MWtQ&usqp=CAU",
-      "category": "artesanato"
+      "category": "artesanato",
+      "details": {
+        "location": "São Paulo",
+        "temperature": "17C - 28C",
+        "entry": "16 Horas",
+        "ageGroup": "A partir de 12 anos",
+        "date": "20 de Setembro de 2022"
+      }
     }
   ]
 }

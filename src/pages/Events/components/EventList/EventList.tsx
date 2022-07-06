@@ -13,7 +13,7 @@ export const EventList: React.FC<EventListProps> = ({ children, onClick }) => {
           <div>
             <h3>{event.title}</h3>
             <p>{event.description}</p>
-            <Details onClick={onClick}>Ver mais</Details>
+            <Details onClick={() => onClick(event)}>Ver mais</Details>
           </div>
         </ContentWrapper>
       ))}

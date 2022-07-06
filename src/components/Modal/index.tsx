@@ -6,7 +6,7 @@ import { Button } from "components/Button/Button";
 
 interface ModalProps {
   isOpen: boolean;
-  onRequestClose: () => void;
+  onRequestClose: (value: any) => void;
   onConfirm?: () => void;
   children?: ReactNode;
   title: string;

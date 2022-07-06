@@ -31,7 +31,7 @@ export const Container = styled.div`
   `}
 `;
 
-export const FavoritList = styled.li`
+export const FavoriteList = styled.li`
   ${({ theme }) => css`
     color: ${theme.colors.mediumBlue};
     font-size: 20px;

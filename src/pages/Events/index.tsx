@@ -3,21 +3,28 @@ import { DetailsModal } from "components/Modal";
 import { useEffect, useState } from "react";
 import { EventList } from "./components/EventList/EventList";
 import { DetailsWrapper, InfoWrapper, SearchContainer } from "./styles";
+import { useEventContext } from "context/EventContext";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import Select from "components/Select/Select";
-import { useEventContext } from "context/EventContext";
 import Spinner from "components/Spinner/Spinner";
+import { IEventList } from "context/types";
 
 export const Events: React.FC = () => {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
   const [eventList, setEventList] = useState([]);
   const [search, setNewSearch] = useState("");
   const [filteredItem, setFilteredItem] = useState([]);
+  const [details, setDetails] = useState<IEventList>({} as IEventList);
 
   const { eventsList, getEventList } = useEventContext();
 
-  const toggleDetailsModal = () => {
+  const toggleModal = () => {
     setIsDetailsModalOpen((prevState) => !prevState);
+  };
+
+  const toggleDetailsModal = (value) => {
+    setDetails(value);
+    toggleModal();
   };
 
   const filteredEvents = eventsList.reduce((acc, current) => {
@@ -94,7 +101,7 @@ export const Events: React.FC = () => {
           onRequestClose={toggleDetailsModal}
         >
           <DetailsWrapper>
-            <ItemDetails />
+            <ItemDetails eventDetails={details} />
           </DetailsWrapper>
         </DetailsModal>
       </div>
@@ -102,7 +109,7 @@ export const Events: React.FC = () => {
   } else {
     return (
       <div className="mainContainer">
-        <Spinner />;
+        <Spinner />
       </div>
     );
   }
