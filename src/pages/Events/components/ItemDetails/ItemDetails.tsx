@@ -1,10 +1,10 @@
 import { IEventList } from "context/types";
 
 interface ItemDetailsPros {
-  eventDetails?: IEventList
+  eventDetails?: IEventList;
 }
 
-const ItemDetails: React.FC<ItemDetailsPros> = ({eventDetails}) => {
+const ItemDetails: React.FC<ItemDetailsPros> = ({ eventDetails }) => {
   return (
     <>
       <p>
@@ -14,7 +14,7 @@ const ItemDetails: React.FC<ItemDetailsPros> = ({eventDetails}) => {
         <strong>Temperatura:</strong> {eventDetails?.details?.temperature}
       </p>
       <p>
-        <strong>Entrada:</strong> {eventDetails?.details?.entry}
+        <strong>Início:</strong> {eventDetails?.details?.entry}
       </p>
       <p>
         <strong>Faixa etária:</strong> {eventDetails?.details?.ageGroup}

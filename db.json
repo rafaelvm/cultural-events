@@ -8,10 +8,10 @@
       "category": "música",
       "details": {
         "location": "São Paulo",
-        "temperature": "13C - 22C",
-        "entry": "20 Horas",
+        "temperature": "13°C - 22°C",
+        "entry": "20 horas",
         "ageGroup": "A partir de 16 anos",
-        "date": "09 de Dezembro de 2022"
+        "date": "09 de dezembro de 2022"
       }
     },
     {
@@ -22,10 +22,10 @@
       "category": "lazer",
       "details": {
         "location": "São Paulo",
-        "temperature": "17C - 28C",
-        "entry": "22 Horas",
+        "temperature": "17°C - 28°C",
+        "entry": "22 horas",
         "ageGroup": "A partir de 18 anos",
-        "date": "04 de Agosto de 2022"
+        "date": "04 de agosto de 2022"
       }
     },
     {
@@ -36,10 +36,10 @@
       "category": "lazer",
       "details": {
         "location": "São Paulo",
-        "temperature": "17C - 28C",
-        "entry": "11 Horas",
+        "temperature": "22°C - 28°C",
+        "entry": "11 horas",
         "ageGroup": "A partir de 08 anos",
-        "date": "10 de Abril de 2022"
+        "date": "10 de abril de 2022"
       }
     },
     {
@@ -50,8 +50,8 @@
       "category": "artesanato",
       "details": {
         "location": "São Paulo",
-        "temperature": "17C - 28C",
-        "entry": "16 Horas",
+        "temperature": "25°C - 33°C",
+        "entry": "16 horas",
         "ageGroup": "A partir de 12 anos",
         "date": "20 de Setembro de 2022"
       }
