@@ -12,6 +12,7 @@ export const ButtonContainer = styled.button`
     color: white;
     font-weight: 400;
     border-radius: 8px;
+
     &:active {
       background-color: ${theme.colors.darkBlue};
     }
