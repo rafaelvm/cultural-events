@@ -35,10 +35,10 @@ export function FavoriteEvents() {
       localStorage.getItem("favorites-events")
     );
 
-    if (eventsFavourites) {
+    if (favorites) {
       setFavorites(eventsFavourites);
     }
-  }, []);
+  }, [favorites]);
 
   if (eventsList.length > 0) {
     return (
@@ -61,10 +61,11 @@ export function FavoriteEvents() {
 
         <h1>Eventos Favoritos</h1>
         <ul>
-          {favorites.map((item) =>
-            item.favorite && (
-              <FavoriteList key={item.id}>{item.title}</FavoriteList>
-            )
+          {favorites.map(
+            (item) =>
+              item.favorite && (
+                <FavoriteList key={item.id}>{item.title}</FavoriteList>
+              )
           )}
         </ul>
       </Container>
