@@ -6,6 +6,7 @@
       "description": "Juma fará uma apresentação bem empolgante sobre sua transformação...",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFytBEWRCVigRCsvwz_9pnA2Sr_HHqQuTExw&usqp=CAU",
       "category": "música",
+      "rating": "4.8",
       "details": {
         "location": "São Paulo",
         "temperature": "13°C - 22°C",
@@ -20,6 +21,7 @@
       "description": "Chegue com seu veículo, de qualquer tipo, e acomode-se para um excelente curta",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5U2mwHnq7jH7PbGxi_E2TMptAgQcTzvo1Jg&usqp=CAU",
       "category": "lazer",
+      "rating": "4.5",
       "details": {
         "location": "São Paulo",
         "temperature": "17°C - 28°C",
@@ -34,6 +36,7 @@
       "description": "Traga seu filho ou filha para uma tarde com muita água e diversão",
       "image": "http://urupes.sp.gov.br/noticias/upload/postagens/1642015980_74322.jpg",
       "category": "lazer",
+      "rating": "3.9",
       "details": {
         "location": "São Paulo",
         "temperature": "22°C - 28°C",
@@ -48,6 +51,7 @@
       "description": "Venha aproveitar a oficina para aprender ou demonstrar suas habilidades",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjvR5wigJqSQmWy9B9R_ZhDRzrspX6z5MWtQ&usqp=CAU",
       "category": "artesanato",
+      "rating": "4.0",
       "details": {
         "location": "São Paulo",
         "temperature": "25°C - 33°C",
