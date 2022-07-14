@@ -6,7 +6,7 @@ export const Container = styled.div`
   gap: 24px;
   margin-top: 32px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
   }
@@ -43,5 +43,16 @@ export const Details = styled.p`
     color: ${theme.colors.ciano};
     font-weight: 600;
     margin-top: 24px;
+  `}
+`;
+
+export const IconRating = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    justify-content: end;
+    margin-top: 24px;
+    gap: 10px;
+    color: ${theme.colors.black};
+    font-weight: 600;
   `}
 `;

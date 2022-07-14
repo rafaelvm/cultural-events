@@ -117,4 +117,24 @@ export const GlobalStyle = createGlobalStyle`
   height: 100%;
   object-fit: cover;
 }
+[data-tooltip] {
+  position: relative;
+}
+[data-tooltip]:before {
+  content: attr(data-tooltip);
+  display: none;
+  position: absolute;
+  top: -45px;
+  z-index: 100;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  background: black;
+  color: white;
+  border-radius: 5px;
+}
+[data-tooltip]:hover:before {
+  display: inline-block;
+}
 `;
