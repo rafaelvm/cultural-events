@@ -23,10 +23,6 @@ export function FavoriteEvents() {
   }
 
   useEffect(() => {
-    setFavorites(eventsList);
-  }, [eventsList]);
-
-  useEffect(() => {
     getEventList();
   }, [getEventList]);
 
@@ -35,10 +31,10 @@ export function FavoriteEvents() {
       localStorage.getItem("favorites-events")
     );
 
-    if (favorites) {
+    if (eventsFavourites) {
       setFavorites(eventsFavourites);
     }
-  }, [favorites]);
+  }, []);
 
   if (eventsList.length > 0) {
     return (
