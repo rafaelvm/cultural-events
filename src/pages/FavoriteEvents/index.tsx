@@ -33,15 +33,17 @@ export function FavoriteEvents() {
 
     if (eventsFavourites) {
       setFavorites(eventsFavourites);
+    } else {
+      setFavorites(eventsList);
     }
-  }, []);
+  }, [eventsList]);
 
   if (eventsList.length > 0) {
     return (
       <Container className="mainContainer">
         <h1>Lista de eventos</h1>
         <ul>
-          {favorites.map((item, index) => (
+          {favorites?.map((item, index) => (
             <li key={index}>
               {item.title}
               <Button
