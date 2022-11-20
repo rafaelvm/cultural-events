@@ -48,4 +48,9 @@ Inicie o servidor
   yarn start
 ```
 
+Inicie o servidor do back-end
+
+```bash
+ yarn json-server
+```
 
