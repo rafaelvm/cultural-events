@@ -18,7 +18,7 @@ Projeto desenvolvido para pós-graduação em Desenvolvimento Front end pelo IGT
 
 ## Stack utilizada
 
-**Front-end:** React, Axios, TypeScript, Styled-components, React-router-dom, React-spinner, React-icons e React-modal.
+**Front-end:** React, Axios, TypeScript e Styled-components.
 
 
 
