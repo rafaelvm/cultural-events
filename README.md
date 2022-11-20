@@ -1,38 +1,51 @@
-# Project developed for the formation of the MBA Front end Development - IGTI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Eventos Culturais
 
-## Available Scripts
+Projeto desenvolvido para pós-graduação em Desenvolvimento Front end pelo IGTI.
 
-In the project directory, you can run:
 
-### `yarn start`
+## Documentação
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[React](https://reactjs.org/)
+[Styled-components](https://styled-components.com)
+[Typescript](https://www.typescriptlang.org)
+[Axios](https://axios-http.com/docs/intro)
+[React-spinner](https://www.npmjs.com/package/react-spinners)
+[React-icons](https://react-icons.github.io/react-icons/)
+[React-modal](https://github.com/reactjs/react-modal)
+[React-router-dom](https://v5.reactrouter.com/web/guides/quick-start)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Stack utilizada
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Front-end:** React, Axios, TypeScript, Styled-components, React-router-dom, React-spinner, React-icons e React-modal.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Rodando localmente
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone o projeto
 
-## Learn More
+```bash
+  git clone https://github.com/rafaelvm/cultural-events
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Entre no diretório do projeto
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  cd https://github.com/rafaelvm/cultural-events
+```
 
-# cultural-events
+Instale as dependências
+
+```bash
+  yarn install
+```
+
+Inicie o servidor
+
+```bash
+  yarn start
+```
+
+
